@@ -1,0 +1,6 @@
+server:
+  root: ~/www
+users:
+  - user: moi
+    pass: 123
+    dir: /qorsam/moi
