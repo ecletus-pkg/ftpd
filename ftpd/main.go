@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/aghape-pkg/ftpd"
+	"github.com/ecletus-pkg/ftpd"
 	"gopkg.in/yaml.v2"
 )
 

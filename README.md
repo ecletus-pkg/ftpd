@@ -1,2 +1,2 @@
 # ftpd
-FTP server Plugin for https://github.com/aghape framework
+FTP server Plugin for https://github.com/ecletus framework
