@@ -189,7 +189,7 @@ func (driver *MainDriver) AuthUser(cc server.ClientContext, user, pass string) (
 		if act.User == user && act.Pass == pass {
 			// If we are authenticated, we can return a client driver containing *our* basedir
 			baseDir := driver.BaseDir + string(os.PathSeparator) + act.Dir
-			perms, err := path_helpers.ResolvPerms(baseDir)
+			perms, err := path_helpers.ResolvePerms(baseDir)
 			if err != nil {
 				return nil, errwrap.Wrap(err, "Resolv perms of %q", baseDir)
 			}
@@ -218,7 +218,7 @@ func (driver *ClientDriver) ChangeDirectory(cc server.ClientContext, directory s
 
 // MakeDirectory creates a directory
 func (driver *ClientDriver) MakeDirectory(cc server.ClientContext, directory string) error {
-	perms, err := path_helpers.ResolvPerms(driver.BaseDir)
+	perms, err := path_helpers.ResolvePerms(driver.BaseDir)
 	if err != nil {
 		return errwrap.Wrap(err, "Resolv perms of %q", driver.BaseDir)
 	}
@@ -247,7 +247,7 @@ func (driver *ClientDriver) OpenFile(cc server.ClientContext, path string, flag 
 		}
 	}
 
-	perms, err := path_helpers.ResolvFilePerms(path)
+	perms, err := path_helpers.ResolveFilePerms(path)
 	if err != nil {
 		return nil, errwrap.Wrap(err, "Resolv perms of %q", path)
 	}
