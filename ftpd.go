@@ -24,7 +24,7 @@ import (
 	"github.com/go-kit/kit/log/level"
 	"github.com/jinzhu/configor"
 	"github.com/mitchellh/go-homedir"
-	"github.com/moisespsena/go-error-wrap"
+	"github.com/moisespsena-go/error-wrap"
 	"github.com/moisespsena-go/path-helpers"
 )
 
