@@ -25,7 +25,7 @@ import (
 	"github.com/jinzhu/configor"
 	"github.com/mitchellh/go-homedir"
 	"github.com/moisespsena/go-error-wrap"
-	"github.com/moisespsena/go-path-helpers"
+	"github.com/moisespsena-go/path-helpers"
 )
 
 // MainDriver defines a very basic ftpserver driver
